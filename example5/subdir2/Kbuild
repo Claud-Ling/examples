@@ -1,0 +1,10 @@
+ifeq ($(__BUILDING_FOR_ARM__),1)
+  $(info building for arm)
+else ifeq ($(__BUILDING_FOR_X86__),1)
+  $(info building for x86)
+endif
+
+
+EXAMPLE4_SUBDIR2_KOBJ = example4-subdir2-kmod
+obj-m += $(EXAMPLE4_SUBDIR2_KOBJ).o
+$(EXAMPLE4_SUBDIR2_KOBJ)-objs := example4-subdir2.o

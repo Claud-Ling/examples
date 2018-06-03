@@ -23,3 +23,21 @@ example2    -   基本的X86 userspace application
 example3    -   项目分别编译成ARM和x86上运行的userspace application
 example4    -   项目分别编译成ARM和x86上运行的kernel module
 example5    -   项目包含了kernel driver和userspace部分,分别编译成ARM和x86两个版本
+
+
+
+5.如何编译?
+  在build system目录下:
+  - make c20_defconfig;
+  - make build
+  则将编译所有工程项目, 耗时较久.这里我们主要介绍编译单独的项目
+
+  基本命令:
+  - make pkg-<pkgname>-rebuild       交叉编译<pkgname>
+  - make host-pkg-<pkgname>-rebuild  以host方式编译<pkgname>
+  例如: make pkg-example5-rebuild
+
+  注: 对于example1和example2来说,只有一种编译方式,
+      make host-pkg-example1-rebuild
+      make pkg-example2-rebuild
+      都是非法的.
