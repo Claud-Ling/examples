@@ -15,7 +15,7 @@ cambricon_build.mk告诉build system该项目如何配置,编译,安装等重要
   - 项目A输出动态链接库(*.so)及API接口声明(*.h)
   - 项目B在编译时需要引用A输出的(.h)文件, 在链接时需要与(.so)链接
   - 项目B在运行时需要在系统库路径中找到A的动态链接库(.so)
-  build system能优雅的处理两者(甚至多项目间)的依赖关系, 为项目开发提供了一个完备的基础环境
+  build system能优雅的处理两者(甚至多项目间)的依赖关系, 为项目开发者提供了一个完备的基础环境
 
 4.以下为示例
 example1    -   基本的ARM userspace application
@@ -24,7 +24,10 @@ example3    -   项目分别编译成ARM和x86上运行的userspace application
 example4    -   项目分别编译成ARM和x86上运行的kernel module
 example5    -   项目包含了kernel driver和userspace部分,分别编译成ARM和x86两个版本
 
-
+example6
+example7    -   example6为函数库, 输出动态链接库(.so)文件,和头文件(.h)
+                example中使用了example6提供的API
+                这两个例子共同演示了build system对这种依赖关系的处理
 
 5.如何编译?
   在build system目录下:
