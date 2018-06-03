@@ -19,7 +19,7 @@ cambricon_build.mk告诉build system该项目如何配置,编译,安装等重要
 
 4.以下为示例
 example1    -   基本的ARM userspace application
-example2    -   基础的X86 userspace application
+example2    -   基本的X86 userspace application
 example3    -   项目分别编译成ARM和x86上运行的userspace application
 example4    -   项目分别编译成ARM和x86上运行的kernel module
 example5    -   项目包含了kernel driver和userspace部分,分别编译成ARM和x86两个版本
